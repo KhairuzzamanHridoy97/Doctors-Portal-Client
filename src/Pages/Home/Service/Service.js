@@ -13,15 +13,13 @@ const Service = (props) => {
         <Grid item xs={2} sm={4} md={4} >
                 <Card sx={{ minWidth: 275 }}>
                 <CardMedia
-        component="img"
-        alt="green iguana"
-        style={{width:'auto',margin:'0 auto',height:'80px'}}
-        image={img}
-      />
+                    component="img"
+                    alt="green iguana"
+                    style={{width:'auto',margin:'0 auto',height:'80px'}}
+                    image={img} 
+                    />
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
-        </Typography>
+        
         <Typography variant="h5" component="div">
           {name}
         </Typography>
@@ -34,9 +32,7 @@ const Service = (props) => {
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+     
     </Card>
         </Grid>   
     );
