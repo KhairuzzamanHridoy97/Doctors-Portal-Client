@@ -24,9 +24,7 @@ const services =[
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti sint ad, provident commodi facere est? Ad,  quia sunt explicabo quibusdam aspernatur, assumenda iste ab libero ut eligendi sint molestias!",
         img: whitening
     },
-]
-
-
+];
 
 const Services = () => {
     return (
@@ -42,7 +40,6 @@ const Services = () => {
                        }
                         </Grid>
                  </Container>
-      
             </Box>
     
     );
