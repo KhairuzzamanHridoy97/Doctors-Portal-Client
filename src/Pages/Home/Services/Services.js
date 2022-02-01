@@ -25,7 +25,9 @@ const services =[
         img: whitening
     },
 ]
-  
+
+
+
 const Services = () => {
     return (
 
