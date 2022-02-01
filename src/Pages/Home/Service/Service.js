@@ -15,10 +15,10 @@ const Service = () => {
           Word of the Day
         </Typography>
         <Typography variant="h5" component="div">
-          benevolent
+          bene vo lent
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
+          Adverb
         </Typography>
         <Typography variant="body2">
           well meaning and kindly.
