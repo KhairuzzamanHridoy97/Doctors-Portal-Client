@@ -4,14 +4,13 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const Service = (props) => {
     const {name,description,img}=props.service;
     return (
         <Grid item xs={2} sm={4} md={4} >
-                <Card sx={{ minWidth: 275 }}>
+                <Card sx={{ minWidth: 275,border:0 ,boxShadow:0}}>
                 <CardMedia
                     component="img"
                     alt="green iguana"
@@ -29,7 +28,7 @@ const Service = (props) => {
         <Typography variant="body2">
         {description}
           <br />
-          {'"a benevolent smile"'}
+         
         </Typography>
       </CardContent>
      
