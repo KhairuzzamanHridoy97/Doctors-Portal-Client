@@ -4,26 +4,45 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import doctor from '../../../images/doctor.png'
 import bg from '../../../images/appointment-bg.png'
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
-const appoinmentBg={
-    background:`url(${bg})`
+const appointmentBg={
+    background:`url(${bg})`,
+    backgroundColor:'rgba(45,57,74,0.85)',
+    backgroundBlendMode: 'darken,luminosity',
+    marginTop:175,
+    
 }
 
 const AppoinmentBanner = () => {
     return (
-        <Box style={appoinmentBg} sx={{ flexGrow: 1 }}>
+        <Box style={appointmentBg} sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
 
                 <Grid item xs={12} md={6}>
-                <img style={{width:"400px"}}  src={doctor} alt="" />
+                <img style={{width:"400px" , marginTop:'-120px'}}  src={doctor} alt="" />
                 </Grid>
-                <Grid item xs={6} md={4}>
-                <Typography variant="h6">
+                <Grid item xs={12} md={6} sx={{
+                    display:'flex',
+                    justifyContent:'flex-start',
+                    alignItems:'center',
+                    textAlign:'left'
+            }}>
+                    <Box>
+                    <Typography variant="h6" sx={{mb:5}} style={{color:'aqua'}}>
                         Appoinment
                 </Typography>
-                </Grid>
-                
+                <Typography variant="h4" sx={{my:3}} style={{color:'whitesmoke'}}>
+                        Make An Appoinment Today
+                </Typography>
+                <Typography sx={{my:3}} variant="h6" style={{color:'white',fontSize:14,fontWeight:400}}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga fugit ipsam autem quisquam sunt magnam facere, esse cum, ducimus 
+                </Typography>
+                <Button variant ='contained'>
+                    LEARN MORE
+                </Button>
+                    </Box>
+                </Grid>               
             </Grid>
         </Box>
     );
