@@ -22,7 +22,7 @@ const services =[
     },
     {
         name:"Teeth Whitening",
-        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti sint ad, provident commodi facere est? Ad,  quia sunt explicabo quibusdam aspernatur, assumenda iste ab libero ut eligendi sint molestias!",
+        description: "Luckily, permanent, whiter teeth can be achieved by receiving porcelain veneers in Scotts Valley. Here is a look at the difference between these two popular cosmetic dental procedures. Porcelain veneers can be used to resolve a variety of appearance issues with teeth, including stains or discoloration.",
         img: whitening
     },
 ];
