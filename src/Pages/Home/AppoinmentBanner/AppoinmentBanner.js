@@ -36,10 +36,10 @@ const AppoinmentBanner = () => {
                         Make An Appoinment Today
                 </Typography>
                 <Typography sx={{my:3}} variant="h6" style={{color:'white',fontSize:14,fontWeight:400}}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga fugit ipsam autem quisquam sunt magnam facere, esse cum, ducimus 
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga fugit ipsam autem quisquam sunt magnam facere, esse cum, ducimus  sunt magnam facere, esse cum, ducimus .  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga fugit ipsam autem quisquam sunt magnam facere.
                 </Typography>
                 <Button variant ='contained'>
-                    LEARN MORE
+                    Get Appoinment
                 </Button>
                     </Box>
                 </Grid>               
