@@ -17,7 +17,7 @@ const services =[
     },
     {
         name:"Cavity Filling",
-        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti sint ad, provident commodi facere est? Ad,  quia sunt explicabo quibusdam aspernatur, assumenda iste ab libero ut eligendi sint molestias!",
+        description: "While patients report slight discomfort during a filling, it is uncommon to experience severe, intolerable pain. As previously mentioned, this is a very common procedure for dentists to perform and modern dentistry has alleviated much of the pain once associated with getting a filling",
         img: cavity
     },
     {
