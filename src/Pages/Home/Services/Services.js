@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 const services =[
     {
         name:"Flouride Treatment",
-        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti sint ad, provident commodi facere est? Ad,  quia sunt explicabo quibusdam aspernatur, assumenda iste ab libero ut eligendi sint molestias!",
+        description: "Fluoride treatments are typically professional treatments containing a high concentration of fluoride that a dentist or hygienist will apply to a person's teeth to improve health and reduce the risk of cavities",
         img: flouride
     },
     {
