@@ -27,7 +27,7 @@ const Banner = () => {
             <Typography  variant='h3'>
                 Your New Smile <br /> Start's Here
           </Typography>
-          <Typography variant='h6' sx={{fontSize:14,color:'gray',fontWeight:300}}>
+          <Typography variant='h6' sx={{fontSize:14,color:'gray',fontWeight:300,my:3}}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet magnam repudiandae voluptate rerum delectus? Ea laborum fugiat nesciunt expedita laboriosam.
           </Typography>
           <Button variant='contained'>
@@ -36,7 +36,7 @@ const Banner = () => {
             </Box>
         </Grid>
         <Grid item  xs={12} md={7} style={verticalCenter}>
-            <img style={{width:'350px'}} src={chair} alt="" />
+            <img style={{width:'380px'}} src={chair} alt="" />
         </Grid>
        
       </Grid>

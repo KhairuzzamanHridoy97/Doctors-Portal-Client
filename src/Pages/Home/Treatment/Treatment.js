@@ -3,14 +3,14 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import treatment from '../../../images/treatment.png';
-import { Button, Typography } from '@mui/material';
+import { Button, Container, Typography } from '@mui/material';
 
 
 
 const Treatment = () => {
     return (
         <div>
-               <Box sx={{ flexGrow: 1 }}>
+               <Container sx={{ flexGrow: 1 }}>
                  <Grid container spacing={2} columns={16} sx={{my:2}}>
                      <Grid  sx={{
                     display:'flex',
@@ -20,7 +20,12 @@ const Treatment = () => {
             }}  item xs={8}>
                         <img style={{width:"400px"}} src={treatment} alt="" />
                      </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={8} sx={{
+                    display:'flex',
+                    justifyContent:'flex-start',
+                    alignItems:'center',
+                    textAlign:'left'
+            }}>
                     <Typography variant="h3" sx={{mb:5}} >
                         Exceptional Dental <br /> Care , On Your Terms
                     </Typography>
@@ -32,7 +37,7 @@ const Treatment = () => {
                     </Button>
                     </Grid>
                   </Grid>
-                </Box>
+                </Container>
         </div>
     );
 };
