@@ -12,7 +12,12 @@ const Treatment = () => {
         <div>
                <Box sx={{ flexGrow: 1 }}>
                  <Grid container spacing={2} columns={16} sx={{my:2}}>
-                     <Grid    item xs={8}>
+                     <Grid  sx={{
+                    display:'flex',
+                    justifyContent:'flex-start',
+                    alignItems:'center',
+                    textAlign:'left'
+            }}  item xs={8}>
                         <img style={{width:"400px"}} src={treatment} alt="" />
                      </Grid>
                     <Grid item xs={8}>

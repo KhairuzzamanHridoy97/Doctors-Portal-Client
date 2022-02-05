@@ -16,7 +16,6 @@ const verticalCenter={
     display:'flex',
     height:400,
     alignItems:'center',
-    border:'1px solid red'
 } 
 
 const Banner = () => {
