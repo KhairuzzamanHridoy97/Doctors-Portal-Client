@@ -7,9 +7,19 @@ import StaticDatePicker from '@mui/lab/StaticDatePicker';
 
 const Calender = () => {
     return (
-        <div>
-            <h2>This is Calender</h2>
-        </div>
+        
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <StaticDatePicker
+        orientation="landscape"
+        openTo="day"
+        value={value}
+        shouldDisableDate={isWeekend}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+        renderInput={(params) => <TextField {...params} />}
+      />
+    </LocalizationProvider>  
     );
 };
 
