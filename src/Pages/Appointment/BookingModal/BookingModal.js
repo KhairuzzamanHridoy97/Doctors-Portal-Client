@@ -64,7 +64,6 @@ const BookingModal = ({openBooking,handleBookingClose,booking,date}) => {
                 defaultValue="Your Name"
                 size="small"
                  />
-
                <TextField              
                sx={{width:'90%',m:1}}
                 id="filled-size-small"
