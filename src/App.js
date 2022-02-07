@@ -12,11 +12,11 @@ function App() {
                 <Route path='/appointment'>
                  <Appointment></Appointment>
                 </Route>
-                <Route path='/home'>
+                <Route exact path='/'>
                     <Home></Home>
                 </Route>
-                <Route path=''>
-
+                <Route path='/home'>
+                    <Home></Home>
                 </Route>
               </Switch>
           </Router>
