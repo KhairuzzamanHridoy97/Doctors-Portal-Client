@@ -13,13 +13,14 @@ const Register = () => {
         const value= e.target.value;
         const newLoginData={...loginData};
         newLoginData[field]=value;
+        console.log(field,value,newLoginData)
         setLoginData(newLoginData);
     }
 
     const handleLoginSubmit=(e)=>{
         if(loginData.password!== loginData.password2){
-
             alert('Your Password did not match');
+            return
         }
         e.preventDefault();
     }
@@ -37,6 +38,7 @@ const Register = () => {
                   id="standard-basic" 
                   label="Your Email" 
                   name="email"
+                  type="email"
                   onChange={handleOnChange}
                   variant="standard"
                    />

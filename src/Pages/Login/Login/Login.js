@@ -48,8 +48,10 @@ const Login = () => {
                       onChange={handleOnChange}
                        />
                        <Button sx={{width:'75%',m:1}}  type='submit' variant='contained'>Login</Button>
-                       <NavLink style={{textDecoration:"none"}} to='/register'>
-                           <Button  variant='text'> New User? Please Register </Button>
+                       <NavLink 
+                       style={{textDecoration:"none"}}
+                        to='/register'>
+                           <Button variant='text'> New User? Please Register </Button>
                        </NavLink>
                 </form>
                 </Grid>
