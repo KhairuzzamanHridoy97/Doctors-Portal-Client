@@ -13,8 +13,8 @@ const Register = () => {
         const value= e.target.value;
         const newLoginData={...loginData};
         newLoginData[field]=value;
-        setLoginData(newLoginData)
-        
+        console.log(newLoginData);
+        setLoginData(newLoginData);
     }
 
     const handleLoginSubmit=(e)=>{
@@ -27,7 +27,7 @@ const Register = () => {
         <Grid container spacing={2}>
             <Grid item sx={{mt:3}} xs={12} md={6}>
             <Typography variant="body1" gutterBottom>
-                    Login
+                    Register Here
             </Typography>
             <form onSubmit={handleLoginSubmit}>
                  <TextField
@@ -50,7 +50,7 @@ const Register = () => {
                  <TextField
                 sx={{width:'75%',m:1}}
                   id="standard-basic" 
-                  label="Your Password" 
+                  label="ReType Your Password" 
                   type='password'
                   name='password2'
                   variant="standard"
@@ -66,7 +66,6 @@ const Register = () => {
             <Grid item xs={12} md={6}>
                 <img style={{width:'100%'}} src={login} alt="" />
             </Grid>
-         
         </Grid>
     </Container>
     );
