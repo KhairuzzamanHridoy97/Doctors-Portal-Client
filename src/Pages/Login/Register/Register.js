@@ -8,7 +8,7 @@ import login from '../../../images/login.png';
 const Register = () => {
     const[loginData,setLoginData]=useState({});
 
-    const {user,registerUser,isLoading} = useAuth();
+    const {user,registerUser,isLoading,authError} = useAuth();
 
 
     const handleOnChange=(e)=>{
@@ -73,8 +73,8 @@ const Register = () => {
                     </NavLink>
                     </form>}
                     {isLoading && <CircularProgress/>}
-                    {user?.email && <Alert severity="success">User Created Successfully</Alert>
-}
+                    {user?.email && <Alert severity="success">User Created Successfully</Alert>}
+                    {authError && <Alert severity="error">{authError}</Alert>}
             
             </Grid>
             <Grid item xs={12} md={6} >
