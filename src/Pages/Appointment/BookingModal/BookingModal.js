@@ -85,7 +85,7 @@ const BookingModal = ({openBooking,handleBookingClose,booking,date}) => {
                 size="small"
                  />
                  <Button type='submit' variant='contained'>
-                    Submit
+                    Submit 
                  </Button>
           </form>
           </Box>
