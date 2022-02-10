@@ -47,7 +47,7 @@ const Login = () => {
                      id="standard-basic" 
                      label="Your Email"
                      name='email'
-                     onChange={handleOnChange} 
+                     onBlur={handleOnChange} 
                      variant="standard" 
                      />
                     <TextField
@@ -55,7 +55,7 @@ const Login = () => {
                      id="standard-basic" 
                      label="Your Password" 
                      name='password'
-                     onChange={handleOnChange}
+                     onBlur={handleOnChange}
                      type='password'
                      variant="standard" 
                      />
