@@ -37,21 +37,21 @@ const Register = () => {
             <Typography variant="body2" gutterBottom>
                     Register </Typography>
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
+                        <TextField
+                        sx={{width:"75%",m:1}}
+                         id="standard-basic" 
+                         label="Your Name"
+                         type='name'
+                         name='text'
+                         onBlur={handleOnBlur} 
+                         variant="standard" 
+                         />
                     <TextField
                     sx={{width:"75%",m:1}}
                      id="standard-basic" 
                      label="Your Email"
                      type='email'
                      name='email'
-                     onBlur={handleOnBlur} 
-                     variant="standard" 
-                     />
-                    <TextField
-                    sx={{width:"75%",m:1}}
-                     id="standard-basic" 
-                     label="Your Name"
-                     type='name'
-                     name='text'
                      onBlur={handleOnBlur} 
                      variant="standard" 
                      />

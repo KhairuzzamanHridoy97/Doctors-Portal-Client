@@ -1,5 +1,5 @@
-import { Container, Grid } from '@mui/material';
-import React from 'react';
+import { Alert, Container, Grid } from '@mui/material';
+import React, { useState } from 'react';
 import Booking from '../Booking/Booking'
 import Typography from '@mui/material/Typography';
 
@@ -44,9 +44,11 @@ const bookings =[
 
 
 const AvailableAppoinments = ({date}) => {
+    const[bookingSuccess,setBookingSuccess]= useState(false)
     return (        
             <Container>
                 <Typography variant='h4' sx={{color:'info.main',py:5}}>Available Appoinments {date.toDateString()}</Typography>
+                {bookingSuccess && <Alert severity="success">Appointment Successfully</Alert>}
                 <Grid container spacing={2}>
                    {
                        bookings.map(booking=>
@@ -54,6 +56,7 @@ const AvailableAppoinments = ({date}) => {
                             key={booking.id}
                             booking={booking}
                             date={date}
+                            setBookingSuccess={setBookingSuccess}
                             ></Booking>
                         )
                    }
