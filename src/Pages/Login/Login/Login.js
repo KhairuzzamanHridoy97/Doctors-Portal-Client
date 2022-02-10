@@ -1,12 +1,19 @@
 import { Button, Container, Grid, TextField, Typography } from '@mui/material';
 import React from 'react';
-import login from '../../../images/login.png'
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import login from '../../../images/login.png';
 const Login = () => {
+    const[loginData,setLoginData]=useState({});
+
 
     const handleOnChange=(e)=>{
         const field = e.target.name;
         const value = e.target.value;
-        console.log(field,value)
+        const newLoginData= {...loginData};
+        newLoginData[field]=value
+        setLoginData(newLoginData)
+        // console.log(field,value)
     }
 
     const handleLoginSubmit =e =>{
@@ -48,6 +55,9 @@ const Login = () => {
                     <Button  type='submit' sx={{width:"75%",m:1}} variant='contained'> 
                         Login
                     </Button>
+                    <NavLink style={{textDecoration:'none'}} to='/register'>
+                        <Button> New User! Please Register </Button>
+                    </NavLink>
                     </form>
             </Typography>
             </Grid>
