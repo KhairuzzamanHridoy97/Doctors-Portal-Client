@@ -8,9 +8,12 @@ initializeFirebase();
 
 const useFirebase = () => {
    const[user,setUser]=useState({});
+   const [isLoading,setIsLoading]=useState(true)
+
    const auth = getAuth();
 
    const registerUser=(email,password) =>{
+       setIsLoading(true);
        createUserWithEmailAndPassword(auth,email,password)
        .then((userCredential) => {
         // Signed in 
@@ -21,10 +24,13 @@ const useFirebase = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-      });
+      })
+      .finally(()=>setIsLoading(false));
+      ;
    };
 
    const loginUser=(email,password)=>{
+       setIsLoading(true)
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
@@ -34,30 +40,36 @@ const useFirebase = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-    });
+    })
+    .finally(()=>setIsLoading(false));
+    ;
   
    }
 
    const logout=()=>{
+       setIsLoading(true)
     signOut(auth).then(() => {
         // Sign-out successful.
       }).catch((error) => {
         // An error happened.
-      });
+      })
+      .finally(()=>setIsLoading(false));
+
+      ;
+      
    };
    // observer user state
    useEffect(()=>{
-    const unsubscirbe=  onAuthStateChanged(auth, (user) => {
-        if (user) {
-         
-          const uid = user.uid;
+    const unsubscirbed=  onAuthStateChanged(auth, (user) => {
+        if (user) {   
           setUser(user);
           // ...
         } else {
           setUser({});
         }
+        setIsLoading(false);
       });
-      return ()=> unsubscirbe;
+      return ()=> unsubscirbed;
    },[])
 
    return{

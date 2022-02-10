@@ -1,11 +1,14 @@
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png';
 
 const Register = () => {
     const[loginData,setLoginData]=useState({});
+
+    const {registerUser,isLoading} = useAuth();
 
 
     const handleOnChange=(e)=>{
@@ -22,7 +25,7 @@ const Register = () => {
             alert('Password Not Matched');
             return
         }
-        alert('Submitted');
+        registerUser(loginData.email,loginData.password);
         e.preventDefault();
     }
     return (
@@ -32,8 +35,8 @@ const Register = () => {
 
             <Grid item xs={12} md={6} >
             <Typography variant="body2" gutterBottom>
-                    Register
-                    <form onSubmit={handleLoginSubmit}>
+                    Register </Typography>
+                    {!isLoading && <form onSubmit={handleLoginSubmit}>
                     <TextField
                     sx={{width:"75%",m:1}}
                      id="standard-basic" 
@@ -56,20 +59,21 @@ const Register = () => {
                         sx={{width:"75%",m:1}}
                      id="standard-basic" 
                      label=" ReType Your Password" 
-                     name='password'
+                     name='password2'
                      onChange={handleOnChange}
                      type='password'
                      variant="standard" 
                      />
                    
                     <Button  type='submit' sx={{width:"75%",m:1}} variant='contained'> 
-                        Login
+                        Register
                     </Button>
                     <NavLink style={{textDecoration:'none'}} to='/login'>
                         <Button variant='text'> Alredy Registered? Please Login </Button>
                     </NavLink>
-                    </form>
-            </Typography>
+                    </form>}
+                    {isLoading && <CircularProgress/>}
+            
             </Grid>
             <Grid item xs={12} md={6} >
                 <img style={{width:'100%'}} src={login} alt="" />
