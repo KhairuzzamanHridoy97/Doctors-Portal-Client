@@ -10,7 +10,7 @@ import login from '../../../images/login.png';
 
 const Login = () => {
     const[loginData,setLoginData]=useState({});
-    const {user,loginUser,isLoading,authError}=useAuth();
+    const {user,loginUser,signInWithGoogle, isLoading,authError}=useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -28,6 +28,11 @@ const Login = () => {
         loginUser(loginData.email,loginData.password ,location,history)
         e.preventDefault();
     }
+
+    const handleGoogleSignIn=()=>{
+        signInWithGoogle(location,history);
+    }
+
     return (
         <Container>
 
@@ -35,7 +40,7 @@ const Login = () => {
 
             <Grid item xs={12} md={6} >
             <Typography variant="body2" gutterBottom>
-                    Login
+                    Login </Typography>
                     <form onSubmit={handleLoginSubmit}>
                     <TextField
                     sx={{width:"75%",m:1}}
@@ -64,13 +69,14 @@ const Login = () => {
                         Login
                     </Button>
                     <NavLink style={{textDecoration:'none'}} to='/register'>
-                        <Button> New User! Please Register </Button>
+                        <Button variant='text'> New User! Please Register </Button>
                     </NavLink>
                     {isLoading && <CircularProgress/>}
                     {user?.email && <Alert severity="success">User Login Successfully</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
-            </Typography>
+                    <p>----------------</p>
+                    <Button onClick={handleGoogleSignIn} variant='contained'> Google Sign In</Button>
             </Grid>
             <Grid item xs={12} md={6} >
                 <img style={{width:'100%'}} src={login} alt="" />
