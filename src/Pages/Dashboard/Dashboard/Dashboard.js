@@ -15,6 +15,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Grid } from '@mui/material';
+import Calender from '../../Shared/Calender/Calender';
+import Appointments from '../Appointments/Appointments';
 
 const drawerWidth = 240;
 
@@ -110,7 +113,14 @@ function Dashboard(props) {
       >
         <Toolbar />
         <Typography paragraph>
-            content here
+        <Grid container spacing={2}>
+            <Grid item xs={8}>
+                <Calender></Calender>
+            </Grid>
+            <Grid item xs={4}>
+                <Appointments></Appointments>
+            </Grid>
+        </Grid>
         </Typography>
        
       </Box>
