@@ -48,7 +48,7 @@ const AvailableAppoinments = ({date}) => {
     return (        
             <Container>
                 <Typography variant='h4' sx={{color:'info.main',py:5}}>Available Appoinments {date.toDateString()}</Typography>
-                {bookingSuccess && <Alert severity="success">Appointment Successfully</Alert>}
+                {bookingSuccess && <Alert severity="success">Appointment Booked Successfully</Alert>}
                 <Grid container spacing={2}>
                    {
                        bookings.map(booking=>

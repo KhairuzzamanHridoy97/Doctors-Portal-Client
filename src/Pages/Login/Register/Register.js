@@ -41,8 +41,8 @@ const Register = () => {
                         sx={{width:"75%",m:1}}
                          id="standard-basic" 
                          label="Your Name"
-                         type='name'
-                         name='text'
+                         type='text'
+                         name='name'
                          onBlur={handleOnBlur} 
                          variant="standard" 
                          />

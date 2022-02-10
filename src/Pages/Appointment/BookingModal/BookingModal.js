@@ -24,9 +24,9 @@ const style = {
 const BookingModal = ({openBooking,handleBookingClose,booking,date,setBookingSuccess}) => {
     const {name,time} = booking;
     const {user}=useAuth();
-    const initialInfo={patientName: user.displayName,email: user.email,phone:''}
+    const initialInfo={patientName: user.displayName, email: user.email, phone: ''}
 
-    const [bookingInfo,setBookingInfo]=useState({initialInfo});
+    const [bookingInfo,setBookingInfo]=useState(initialInfo);
 
     const handleOnBlur =(e)=>{
         const field = e.target.name;
@@ -46,6 +46,7 @@ const BookingModal = ({openBooking,handleBookingClose,booking,date,setBookingSuc
           serviceName: name,
           date: date.toLocaleDateString()
         }
+
         //send to the server
         fetch('http://localhost:5000/appointments',{
           method:"POST",
@@ -61,7 +62,7 @@ const BookingModal = ({openBooking,handleBookingClose,booking,date,setBookingSuc
            handleBookingClose();
          }
         });
-
+        
         e.preventDefault();
     }
 
@@ -111,7 +112,7 @@ const BookingModal = ({openBooking,handleBookingClose,booking,date,setBookingSuc
                 id="filled-size-small"
                 onBlur={handleOnBlur}
                 name='phone'
-                placeholder="Your Phone Number"
+                defaultValue="Your Phone Number"
                 size="small"
                  />
                <TextField  

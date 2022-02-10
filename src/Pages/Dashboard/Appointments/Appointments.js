@@ -1,6 +1,5 @@
-import React ,{useState}from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React ,{useState,useEffect}from 'react';
+// import { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 
 const Appointments = () => {
