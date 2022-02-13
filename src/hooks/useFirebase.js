@@ -22,6 +22,9 @@ const useFirebase = () => {
            setAuthError('');
            const newUser={email,displayName:name};
            setUser(newUser);
+
+           //save user to the database
+           saveUser(email,name);
            
            //send name to firebase after creation 
            updateProfile(auth.currentUser, {
@@ -71,6 +74,12 @@ const useFirebase = () => {
       ;
       
    };
+
+   // saveUser
+
+   const saveUser = (email,displayName)=>{
+
+   }
 
    const signInWithGoogle=(location,history)=>{
     setIsLoading(true)
